@@ -1,0 +1,91 @@
+question-1
+
+1. Imagine you're at a provision store, and you need to buy different products like rice, sugar, and oil. Each product has a price and quantity, and the store applies a 5% tax on the total purchase.
+
+#include<stdio.h>
+int main()
+{
+float quantity_of_rice,cost_of_rice,quantity_of_oil,cost_of_oil,quantity_of_sugar,cost_of_sugar,total_amount_without_tax,tax_amount,total_amount_with_tax;
+ printf("quantity of rice in kgs=");
+ scanf("%f",&quantity_of_rice);
+ printf("cost of rice=");
+ scanf("%f",&cost_of_rice);
+ printf("quanity of oil in liters=");
+ scanf("%f",&quantity_of_oil);
+ printf("cost of oil=");
+ scanf("%f",&cost_of_oil);
+ printf("quantity of sugar kgs=");
+ scanf("%f",&quantity_of_sugar);
+ printf("cost of sugar kgs=");
+ scanf("%f",&cost_of_sugar);
+ total_amount_without_tax= quantity_of_rice*cost_of_rice+quantity_of_sugar*cost_of_sugar+quantity_of_oil*cost_of_oil;
+printf("total amount without tax=%.2f\n",total_amount_without_tax);
+tax_amount=total_amount_without_tax*5/100;
+printf("tax amount=%.2f\n",tax_amount);
+total_amount_with_tax=total_amount_without_tax+tax_amount;
+printf("total amount with tax=%.2f\n",total_amount_with_tax);
+return 0;
+}
+ 
+ output=
+quantity of rice in kgs=1
+cost of rice=100
+quanity of oil in liters=2
+cost of oil=140
+quantity of sugar kgs=1
+cost of sugar kgs=40
+total amount without tax=420.00
+tax amount=21.00
+total amount with tax=441.00
+
+question-2
+
+2. You are at an electronics store purchasing different gadgets like a laptop, headphones, and a phone charger. Each item has a price and quantity, and there is a 10% tax added to the total amount at checkout.
+
+Questions:
+
+How many laptops do you wish to buy? What is the price of one laptop?
+How many pairs of headphones are you purchasing? What is the price for each pair?
+How many phone chargers are you buying? What is the price of each charger?
+What is your subtotal before tax?
+How much tax is added to the subtotal?
+What is the total amount to pay, including tax?
+
+
+#include <stdio.h>
+int main()
+{
+int a,b,c,d,e,f,g,sum;
+float h;
+printf("how many laptops do you wish to buy=");
+scanf("%d",&a);
+printf("what is the price of the one laptop=");
+scanf("%d",&b);
+printf("how many pairs of head phones are you purchasing=");
+scanf("%d",&c);
+printf("what is the price of each pair for each pair=");
+scanf("%d",&d);
+printf("how many phone chargers are you buying=");
+scanf("%d",&e);
+printf("what is the price of each charger=");
+scanf("%d",&f);
+g=a*b+c*d+e*f;
+printf("what is your subtotal before tax=%d\n",g);
+h=g*10/100;
+printf("how much tax is  added to the subtotal=%f\n",h);
+sum=g+h;
+printf("total amount to be paid including tax=%d\n",sum);
+return 0;
+}
+
+output=
+
+how many laptops do you wish to buy=2
+what is the price of the one laptop=65000
+how many pairs of head phones are you purchasing=1
+what is the price of each pair for each pair=1200
+how many phone chargers are you buying=1
+what is the price of each charger=3000
+what is your subtotal before tax=134200
+how much tax is  added to the subtotal=13420.000000
+total amount to be paid including tax=147620
