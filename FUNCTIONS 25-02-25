@@ -1,0 +1,84 @@
+ #include<stdio.h>
+
+long int multiplyNumbers(int n);
+
+int main() {
+
+    int n;
+
+    printf("Enter a positive integer: ");
+
+    scanf("%d",&n);
+
+    printf("Factorial of %d = %ld", n, multiplyNumbers(n));
+
+    return 0;
+
+}
+
+
+
+long int multiplyNumbers(int n) {
+
+    if (n>=1)
+
+        return n*multiplyNumbers(n-1);
+
+    else
+
+        return 1;
+
+}
+
+
+
+
+RECURSION FIBONACCI SERIES
+ #include <stdio.h>
+
+int fibonacci(int n) {
+    if (n <= 0) {
+        return 0;
+    } else if (n == 1) {
+        return 1;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+int main() {
+    int n=10, i;
+    
+    
+    printf("Fibonacci Series: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    
+    return 0;
+}
+
+
+
+#include <stdio.h> 
+ 
+ int main() { 
+ int days, years, months, weeks; 
+ 
+ printf("Enter the number of days: "); 
+ scanf("%d", &days); 
+
+years= days / 365; 
+ days %=365; 
+ months= days / 30; 
+days %= 30;
+weeks =days / 7; 
+ days %= 7; 
+
+ printf("Years: %d\n", years); 
+ printf("Months: %d\n", months); 
+ printf("Weeks: %d\n", weeks); 
+ printf("Days: %d\n", days); 
+ 
+ return 0; 
+}
